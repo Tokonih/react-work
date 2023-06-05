@@ -1,0 +1,18 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.Banner{
+  background-image:  linear-gradient(rgb(0, 0, 0, 0.5), rgb(0, 0, 0, 0.3)), url(./Component/img/banner3.jpg);
+  height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body{
+  font-family: sans-serif;
+}
