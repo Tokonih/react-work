@@ -1,23 +1,25 @@
 .Approach{
-    height: 90vh;
-    /* width: 90%; */
+    height: 500px;
+    width: 100%;
     margin: auto;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     background-color: #f5f1ee;
 }
-.Approach div{
+.Approach .app{
+    height: 380px;
+    width: 30%;
+    margin: auto;
+}
+
+.Approach .grass-image{
     width: 50%;
-}
-
-.grass-image{
-    width: 100%;
-    height: 90vh;
+    height: 100%;
 
 }
-.grass-image img{
-    height: 90vh;
+.Approach .grass-image img{
+    height: 100%;
     width: 100%;
 }
 
