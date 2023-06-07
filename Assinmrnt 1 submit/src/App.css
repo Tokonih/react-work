@@ -1,0 +1,117 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.Banner{
+  background-image:  linear-gradient(rgb(0, 0, 0, 0.5), rgb(0, 0, 0, 0.3)), url(./Component/img/banner3.jpg);
+  height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+body{
+  font-family: sans-serif;
+}
+
+.Nav-list{
+  text-decoration: none;
+  color: Black;
+  font-weight: 700;
+}
+
+.contact-page{
+  height: 700px;
+  width: 80%;
+  margin: auto;
+  top: 20%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  /* justify-content: space-around; */
+  background-color: #dbd5ce;
+}
+
+.contact-page .contact-left{
+  height: 100%;
+  width: 50%;
+}
+
+.contact-left img {
+  height: 100%;
+  width: 100%;
+}
+.contact-page .contact-rigth  {
+  /* height: 700px; */
+  width: 100%;
+  margin: auto;
+}
+
+form div  {
+  padding-bottom: 1rem;
+}
+ form input  {
+  display: block;
+  height: 40px;
+  width: 100%;
+}
+
+form button {
+  padding: 15px 35px;
+  color: black;
+  background-color: 
+  #f5f1ee;
+}
+
+@media(max-width: 1000px){
+  .Approach{
+    display: block;
+    height: 1000px;
+  }
+  .Approach .app{
+    width: 75%;
+    height: 50%;
+    padding-top: 40px;
+    line-height: 1.6;
+  }
+  .Approach .grass-image{
+    width: 100%;
+    height: 50%;
+    margin: auto;
+  }
+
+  .grass-image img{
+    width: 100%;
+  }
+  .sec3-{
+    line-height: 3rem;
+    padding: 10px 20px;
+  }
+  .sec3- h1{
+    font-size: 30px;
+    padding-bottom: 30px;
+  }
+
+ .Approach2{
+  height: 1000px;
+  display:block;
+ }
+ .Approach2 .grass-image2{
+  width: 100%;
+  height: 50%;
+ }
+
+ .Approach-2{
+  width: 100%;
+  height: 50%;
+ }
+
+ .Approach-2 div{
+   height: 380%;
+  width: 100%;
+ }
+}

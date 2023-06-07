@@ -1,0 +1,24 @@
+.sec5{
+    height: 400px;
+    width: 100%;
+    background-color: 
+    #f5f1ee;
+    margin-top: 5px;
+}
+
+.sec5 div{
+    
+    height: 200px;
+    width: 50%;
+    margin: auto;
+    background-color: #dbd5ce;
+    display: flex;
+    align-items:center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.sec5 button{
+    background-color: #f5f1ee;
+}

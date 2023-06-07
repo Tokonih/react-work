@@ -1,0 +1,44 @@
+.Approach{
+    height: 700px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #f5f1ee;
+}
+.Approach .app{
+    height: 380px;
+    width: 30%;
+    margin: auto;
+}
+
+.Approach .grass-image{
+    width: 50%;
+    height: 100%;
+
+}
+.Approach .grass-image img{
+    height: 100%;
+    width: 100%;
+}
+
+.Approach-{
+    width: 100%;
+    margin: auto;
+}
+
+
+.Approach- h1, h3, p{
+    margin-bottom: 2rem;
+    line-height: 2rem;
+}
+
+.Approach- button{
+    padding: 10px 15px;
+    background-color: 
+    #f5f1ee;
+    border: none;
+    font-weight: 500;
+
+}

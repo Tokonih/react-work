@@ -1,0 +1,29 @@
+.navbar{
+    height: 100px;
+    width: 100%;
+    background-color: 
+    #f5f1ee;
+}
+
+.navbar nav{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: whitesmoke; */
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+}
+
+nav ul li {
+    padding: 20px;
+}
+
+
+  

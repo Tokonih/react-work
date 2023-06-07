@@ -1,0 +1,26 @@
+.sec3{
+    height: 300px;
+    width: 100%;
+    background-color: #f5f1ee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.sec3-{
+    line-height: 6rem;
+}
+
+.sec3- h1{
+    font-size: 40px;
+}
+
+button{
+    padding: 15px 25px;
+    border: none;
+    background-color: 
+    #dbd5ce;
+    font-weight: 500;
+}
