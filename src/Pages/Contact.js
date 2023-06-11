@@ -11,6 +11,7 @@ function Contact() {
   const [email, setEmail] = useState('') 
   const [text, setText] = useState('') 
   const [emailinfo, setEmailnfo] = useState(false) 
+  const [err, setErr] = useState(false) 
 
   const handleEmail = (e) =>{
     e.preventDefault()
@@ -20,7 +21,12 @@ function Contact() {
 
   const handleSubmit = (e) =>{
     e.preventDefault()
+    if (fname === "" || lname ==="" || phone ==="" || email ==="" || text === ""){
+      setErr(true)
+      return
+    }
   }
+
 
   // let user = {
   //   firt_name: fname,
@@ -47,7 +53,8 @@ function Contact() {
                 value={fname}
                 onChange={(e) =>(setFname(e.target.value))}
                 />
-                <span></span>
+                {err=== true && fname === "" ? <span> First name required</span> : null}
+                
               </div>
               <div>
                 <label htmlFor=""> Last Name</label>
@@ -55,7 +62,8 @@ function Contact() {
                 value={lname}
                 onChange={(e)=>(setLname(e.target.value))}
                 />
-                <span></span>
+                  {err=== true && lname === "" ? <span> last name required</span> : null}
+
               </div>
               <div>
                 <label htmlFor="">Phone</label>
@@ -63,7 +71,7 @@ function Contact() {
                 value={phone}
                 onChange={(e)=>(setPhone(e.target.value))}
                 />
-                <span></span>
+                {err=== true && phone === "" ? <span>Phone number is required</span> : null}
               </div>
               <div>
                 <label htmlFor="">Email</label>
@@ -71,7 +79,7 @@ function Contact() {
                 value={email}
                 onChange={(e)=>(setEmail(e.target.value))}
                 />
-                <span></span>
+               {err=== true && email === ""?  <span>Email is required</span>: null}
               </div>
               <div>
                 <label htmlFor=""></label>
@@ -79,7 +87,7 @@ function Contact() {
                 value={text}
                 onChange={(e)=>(setText(e.target.value))}
                 ></textarea>
-                <span></span>
+                {err === true && text === ""?  <span>Message is reqiured</span> : null}
               </div>
               <div>
                 {/* <label htmlFor=""></label> */}
