@@ -25,17 +25,18 @@ function Contact() {
       setErr(true)
       return
     }
+      let user = {
+    firt_name: fname,
+    last_name: lname,
+    phone: phone,
+    email: email,
+    text:text
+  }
+  console.log(user)
   }
 
 
-  // let user = {
-  //   firt_name: fname,
-  //   last_name: lname,
-  //   phone: phone,
-  //   email: email,
-  //   text:text
-  // }
-  // console.log(user)
+
 
   return (
     <div>
