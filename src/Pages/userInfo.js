@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react"
-// import userinfo from "../Pages/"
+// import Userinfo from "./Pages/userInfo";
+
 
 function Userinfo(){
    
-    const [user, setuser] = useState(null)
+    const [user, setuser] = useState()
 
     useEffect(() => {
         fetch('http://localhost:8000/userData')
