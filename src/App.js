@@ -4,6 +4,7 @@ import Booking from "../src/Pages/Booking"
 import Contact from "../src/Pages/Contact"
 import Menu from "../src/Pages/Menu" 
 import Home from "../src/Pages/Home"
+import Userinfo from "./Pages/userInfo";
 // import Navigation from "./Component/Navigation";
 // import Banner from "./Component/Banner"
 // import Section1 from "./Component/Section1"
@@ -21,6 +22,7 @@ function App() {
         <Route path='/Contact' element={<Contact/>}/>
         <Route path='/About' element={<About/>}/>
         <Route path='/Menu' element={<Menu/>}/>
+        <Route path='/UserInfo' element={<Userinfo/>}/>
       </Routes>
     </BrowserRouter>
   );

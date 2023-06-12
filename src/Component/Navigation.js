@@ -18,6 +18,8 @@ function Navigation() {
            <Link className="Nav-list" to="/About">About</Link> </li>
           <li>
             <Link className="Nav-list" to="/Menu">Menu</Link></li>
+            <li>
+            <Link className="Nav-list" to="/Userinfo">User info</Link></li>
         </ul>
       </nav>
     </div>
