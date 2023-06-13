@@ -3,6 +3,7 @@ import Navigation from "../Component/Navigation";
 // import Banner from "../Component/Banner";
 import img from "../Component/img/banner2.jpg";
 import { useState } from "react";
+import {useNavigate} from "react-router-dom"
 
 function Contact() {
   const [fname, setFname] = useState("");
@@ -12,6 +13,9 @@ function Contact() {
   const [text, setText] = useState("");
   const [emailinfo, setEmailnfo] = useState(false);
   const [err, setErr] = useState(false);
+  const navigation = useNavigate()
+  // const history = useHistory()
+
 
   const handleEmail = (e) => {
     e.preventDefault();
@@ -32,20 +36,16 @@ function Contact() {
       return;
     }
     let user = {
-      fname,
-      phone,
-      email,
-      text,
+     First_Name: fname,
+     Last_Name: lname,
+     phone: phone,
+     Email: email,
+     Text: text,
     };
+    navigation('/userinfo', {state: user})
     // console.log(user)
 
-    fetch('http://localhost:8000/userData', {
-      method:'POST',
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(user),
-    }).then(() => {
-      console.log("New user created")
-    });
+ 
   };
 
   return (

@@ -3,7 +3,7 @@
     {
       "fname": "Deborah ",
       "lname": "Inyang",
-      "Phone": 34567890,
+      "Phone": "34567890",
       "email": "deborah@gmail.com",
       "text": "first try",
       "id": 1
@@ -21,6 +21,21 @@
       "email": "tk'@gmail.com",
       "text": "dfyhu",
       "id": 3
+    },
+    {
+      "fname": "segun",
+      "phone": "234678",
+      "email": "segun@gmail.com",
+      "text": "this is segun",
+      "id": 4
+    },
+    {
+      "fname": "Abu",
+      "lname": "Theo",
+      "phone": "09037495847",
+      "email": "abutheo@gmail.com",
+      "text": "Nice hospitality",
+      "id": 5
     }
   ]
 }
