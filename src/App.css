@@ -67,6 +67,22 @@ form button {
   #f5f1ee;
 }
 
+.output{
+
+  height: 100px;
+  width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+
+
+
+
 @media(max-width: 1000px){
   .Approach{
     display: block;

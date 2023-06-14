@@ -22,8 +22,17 @@ function Post(){
     return(
         <div>
             <Navigation/>
-            {/* <div>{data}</div> */}
-            {data && <div>{data.title.body}</div>}
+           <div className="output">
+             {/* <div>{data}</div> */}
+             {data && data.map((info) => {
+                return <div key={info.id} >
+                          <div>
+                          <h3>Title:  { info.title}</h3>
+                          <p>Body: {info.body}</p>
+                          </div>
+                       </div>
+            })}
+           </div>
            
         </div>
     )
