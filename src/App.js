@@ -14,17 +14,19 @@ import Posts from "./Pages/Posts"
 // import  Section5 from "./Component/Section5"
 
 import "./App.css";
+import FoodDetails from "./Pages/FoodDetails";
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<Home/>}/>
-        <Route path='/Booking' element={<Booking/>}/>
-        <Route path='/Contact' element={<Contact/>}/>
-        <Route path='/About' element={<About/>}/>
-        <Route path='/Menu' element={<Menu/>}/>
-        <Route path='/UserInfo' element={<Userinfo/>}/>
-        <Route path='/posts' element={<Posts/>}/>
+        <Route path="/" element={<Home />} />
+        <Route path="/Booking" element={<Booking />} />
+        <Route path="/Contact" element={<Contact />} />
+        <Route path="/About" element={<About />} />
+        <Route path="/Menu" element={<Menu />} />
+        <Route path="/Menu/:foodId" element={<FoodDetails />} />
+        <Route path="/UserInfo" element={<Userinfo />} />
+        <Route path="/posts" element={<Posts />} />
       </Routes>
     </BrowserRouter>
   );
