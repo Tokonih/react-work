@@ -7,13 +7,21 @@ function Menu() {
     const [food, setFood] = useState([])
     const getData = () => {
         fetch(
-          "https://free-food-menus-api-production.up.railway.app/best-foods"
+          "https://free-food-menus-api-production.up.railway.app/our-foods"
         ).then((resp) => resp.json())
             .then((data) => {
                 setFood(data)
                 console.log(data)
         } )
-    }
+    } 
+
+    // const getCategory = (cat) => {
+    //     fetch(`https://free-food-menus-api-production.up.railway.app/${cat}`)
+    //         .then((resp) => resp.json())
+    //         .then((category) => {
+    //         setFood(category)
+    //     })
+    // }
 
     useEffect(() => {
       getData()
@@ -30,7 +38,11 @@ function Menu() {
         <div className="food-details">
           {food &&
             food.map((data, i) => (
-              <Link to={`/menu/${data.id}`} className="Food" key={i}>
+              <Link
+                to={`/menu/category/${i}/${data.id}`}
+                className="Food"
+                key={i}
+              >
                 <img src={data.img} alt="" />
                 <h3>{data.name}</h3>
                 <h4>{data.dsc}</h4>

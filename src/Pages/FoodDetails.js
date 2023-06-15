@@ -7,29 +7,32 @@ function FoodDetails() {
   const [singlefood, setSinglefood] = useState({});
 
   const getFood = () => {
-      fetch(`https://free-food-menus-api-production.up.railway.app/our-foods/${foodId}`)
-          .then((resp) => resp.json())
-          .then((data) => {
-              setSinglefood(data)
-              console.log(data)
-      })
-  }
+    fetch(
+      `https://free-food-menus-api-production.up.railway.app/our-foods/${foodId}`
+    )
+      .then((resp) => resp.json())
+      .then((data) => {
+        setSinglefood(data);
+        console.log(data);
+      });
+  };
 
   useEffect(() => {
-      getFood()
-  }, [])
+    getFood();
+  }, []);
 
   return (
     <div>
       <Navigation />
-      <div className="Menu-page">
+      <div className="single-food-page">
         <h1>{foodId} </h1>
       </div>
-      <div>
+      <div className="single-food">
         <img src={singlefood.img} alt="" />
         <h3>{singlefood.name}</h3>
         <p>{singlefood.dsc}</p>
         <h3>{singlefood.price}</h3>
+        <button>Order Now </button>
       </div>
     </div>
   );
