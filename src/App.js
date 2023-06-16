@@ -1,11 +1,11 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import About from "../src/Pages/About"
-import Booking from "../src/Pages/Booking"
-import Contact from "../src/Pages/Contact"
-import Menu from "../src/Pages/Menu" 
-import Home from "../src/Pages/Home"
+import About from "../src/Pages/About";
+import Booking from "../src/Pages/Booking";
+import Contact from "../src/Pages/Contact";
+import Menu from "../src/Pages/Menu";
+import Home from "../src/Pages/Home";
 import Userinfo from "./Pages/userInfo";
-import Posts from "./Pages/Posts"
+import Posts from "./Pages/Posts";
 // import Navigation from "./Component/Navigation";
 // import Banner from "./Component/Banner"
 // import Section1 from "./Component/Section1"
@@ -15,6 +15,8 @@ import Posts from "./Pages/Posts"
 
 import "./App.css";
 import FoodDetails from "./Pages/FoodDetails";
+import Blog from "./BlogFrontend.js/Blog";
+
 function App() {
   return (
     <BrowserRouter>
@@ -24,9 +26,13 @@ function App() {
         <Route path="/Contact" element={<Contact />} />
         <Route path="/About" element={<About />} />
         <Route path="/Menu" element={<Menu />} />
-        <Route path="/Menu/category/:categoryIndex/:foodId" element={<FoodDetails />} />
+        <Route
+          path="/Menu/category/:categoryIndex/:foodId"
+          element={<FoodDetails />}
+        />
         <Route path="/UserInfo" element={<Userinfo />} />
         <Route path="/posts" element={<Posts />} />
+        <Route path="/Blog" element={<Blog />} />
       </Routes>
     </BrowserRouter>
   );

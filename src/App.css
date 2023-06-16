@@ -78,11 +78,19 @@ form button {
 }
 
 /* Menu page */
+.menuPage, .single-food-page{
+  padding-top: 100px;
+}
+
+
 .Menu-page h1 {
   height: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
+
+  /* padding-top: 50px; */
+
 }
 .menu {
   width: 100%;
@@ -91,16 +99,33 @@ form button {
   align-items: flex-start;
   justify-content: center;
   gap: 50px;
+  /* margin-top: 50px; */
 }
 
 .menu-side-bar {
   width: 20%;
-  height: 500px;
-  background-color: whitesmoke;
+  height: 750px;
+  background-color: 
+#f5f1ee;
+  color: black;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 110px;
+  border-radius: 10px;
+}
+
+.menu-side-bar button{
+  display: block;
+  width: 90%;
+  margin: auto;
+  margin-top: 10px;
+  padding: 15px;
+  cursor: pointer;
+    text-transform: capitalize;
+  font-weight: 700;
 }
 
 .food-details {
-  /* height: 200px; */
   width: 80%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -127,10 +152,15 @@ form button {
   color: rgba(62, 61, 61);
 }
 
-.single-food-page{
-
+.single-food{
+  /* background-color: #dbd5ce; */
+  padding: 20px;
 }
 
+.single-food button{
+  background-color: 
+#f5f1ee;
+}
 
 .single-food-page h1{
    height: 100px;
@@ -217,6 +247,23 @@ form button {
     width: 100%;
   }
 }
+
+/* Blog */
+.blog-banner{
+  min-height: 400px;
+  background-image:linear-gradient( rgba(0,0,0,.4), rgba(0,0,0,0.5)), url(./Component/img/banner3.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.blog-banner h1{
+  font-size: 45px;
+}
+
 
 @media (max-width: 427px) {
   .Approach-2 div {
