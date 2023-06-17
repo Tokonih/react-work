@@ -48,6 +48,11 @@ function Navigation() {
               Blog
             </Link>
           </li>
+          <li>
+            <Link className="Nav-list" to="/CreateEmp">
+              Employees
+            </Link>
+          </li>
         </ul>
       </nav>
     </div>

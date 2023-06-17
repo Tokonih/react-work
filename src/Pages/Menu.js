@@ -19,14 +19,14 @@ function Menu() {
     "sausage",
     "steaks",
   ];
-  const getData = () => {
-    fetch("https://free-food-menus-api-production.up.railway.app/our-foods")
-      .then((resp) => resp.json())
-      .then((data) => {
-        setFood(data);
-        console.log(data);
-      });
-  };
+  // const getData = () => {
+  //   fetch("https://free-food-menus-api-production.up.railway.app/our-foods")
+  //     .then((resp) => resp.json())
+  //     .then((data) => {
+  //       setFood(data);
+  //       console.log(data);
+  //     });
+  // };
 
 
 
@@ -34,7 +34,10 @@ function Menu() {
     fetch(`https://free-food-menus-api-production.up.railway.app/${cat}`)
       .then((resp) => resp.json())
       .then((category) => {
-        setFood(category);
+        const foorArr = category.map((food) => {
+          return {...food, category:cat}
+        })
+        setFood(foorArr);
       });
   };
 
@@ -60,10 +63,12 @@ function Menu() {
     //   }
     //   return <div>{foodRate}</div>;
     // };
+    const rating = (num) => "⭐".repeat(num)
 
   useEffect(() => {
-    getData();
+    getCategory("best-foods");
   }, []);
+
 
   return (
     <div className="Menu-page">
@@ -86,7 +91,7 @@ function Menu() {
             {food &&
               food.map((data, i) => (
                 <Link
-                  to={`/menu/category/${i}/${data.id}`}
+                  to={`/menu/category/${food.category}/${data.id}`}
                   className="Food"
                   key={i}
                 >
@@ -95,7 +100,7 @@ function Menu() {
                   <h4>{data.dsc}</h4>
                   <h4>₦{data.price}</h4>
                   {/* <p>{foodRate}</p> */}
-                  <h4>⭐{data.rate}</h4>
+                  <h4>{rating(data.rate)}</h4>
                 </Link>
               ))}
           </div>

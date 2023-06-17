@@ -16,6 +16,7 @@ import Posts from "./Pages/Posts";
 import "./App.css";
 import FoodDetails from "./Pages/FoodDetails";
 import Blog from "./BlogFrontend.js/Blog";
+import CreateEmp from "./Dashboard.js/createEmp";
 
 function App() {
   return (
@@ -26,13 +27,11 @@ function App() {
         <Route path="/Contact" element={<Contact />} />
         <Route path="/About" element={<About />} />
         <Route path="/Menu" element={<Menu />} />
-        <Route
-          path="/Menu/category/:categoryIndex/:foodId"
-          element={<FoodDetails />}
-        />
+        <Route path="/Menu/:category/:foodId" element={<FoodDetails />} />
         <Route path="/UserInfo" element={<Userinfo />} />
         <Route path="/posts" element={<Posts />} />
         <Route path="/Blog" element={<Blog />} />
+        <Route path="/CreateEmp" element={<CreateEmp />} />
       </Routes>
     </BrowserRouter>
   );
