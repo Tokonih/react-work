@@ -7,7 +7,7 @@ function Navigation() {
       <nav>
         <div>
           <h1>
-            <Link className="Nav-list" to="/Home">
+            <Link className="Nav-list" to="/">
               TK
             </Link>{" "}
           </h1>

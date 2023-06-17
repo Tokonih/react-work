@@ -264,6 +264,19 @@ form button {
   font-size: 45px;
 }
 
+.blog-navigation{
+  height: 70px;
+  width: 100%;
+}
+
+.blog-nav{
+    height: 70px;
+  width: 95%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
 @media (max-width: 427px) {
   .Approach-2 div {
