@@ -7,7 +7,8 @@ function Blog() {
     <div>
       <BlogNav />
           <BlogBanner />
-          <BlogCard/>
+          <BlogCard />
+          
     </div>
   );
 }

@@ -258,6 +258,7 @@ form button {
   align-items: center;
   justify-content: center;
   color: white;
+  position: relative;
 
 }
 
@@ -369,8 +370,23 @@ color: #787878;}
   text-transform: uppercase;
 }
 
+/* create blog */
+.create-blog-link{
+  text-decoration: none;
+  padding: 10px 30px;
+  background-color: #404040;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  transition: 0.3s ease;
+  color: white;
+}
 
 
+.create-blog-link:hover{
+  background-color: black;
+}
 
 
 @media (max-width: 427px) {

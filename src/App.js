@@ -10,6 +10,8 @@ import "./App.css";
 import FoodDetails from "./Pages/FoodDetails";
 import Blog from "./BlogFrontend.js/Blog";
 import CreateEmp from "./Dashboard.js/createEmp";
+import BlogDashboard from "./BlogAdmin.js/BlogDashboard";
+import CreateBlog from "./BlogAdmin.js/CreateBLog";
 
 function App() {
   return (
@@ -24,7 +26,10 @@ function App() {
         <Route path="/UserInfo" element={<Userinfo />} />
         <Route path="/posts" element={<Posts />} />
         <Route path="/Blog" element={<Blog />} />
-        <Route path="/CreateEmp" element={<CreateEmp />} />
+        <Route path="/BlogDashboard" element={<BlogDashboard />} />
+        <Route path="/CreateBlog" element={<CreateBlog />} />
+
+        {/* <Route path="/CreateEmp" element={<CreateEmp />} /> */}
       </Routes>
     </BrowserRouter>
   );

@@ -53,6 +53,18 @@ function Navigation() {
               Employees
             </Link>{" "}
           </li>
+
+          {/* <li>
+            <Link className="Nav-list" to="/BlogDashboard">
+              BlogDashboard
+            </Link>{" "}
+          </li>
+
+          <li>
+            <Link className="Nav-list" to="/CreateBlog">
+              CreateBlog
+            </Link>{" "}
+          </li> */}
         </ul>
       </nav>
     </div>
