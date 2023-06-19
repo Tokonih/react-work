@@ -51,7 +51,7 @@ function Navigation() {
           <li>
             <Link className="Nav-list" to="/CreateEmp">
               Employees
-            </Link>
+            </Link>{" "}
           </li>
         </ul>
       </nav>

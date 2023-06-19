@@ -6,13 +6,6 @@ import Menu from "../src/Pages/Menu";
 import Home from "../src/Pages/Home";
 import Userinfo from "./Pages/userInfo";
 import Posts from "./Pages/Posts";
-// import Navigation from "./Component/Navigation";
-// import Banner from "./Component/Banner"
-// import Section1 from "./Component/Section1"
-// import Section3 from "./Component/Section3"
-// import  Section4 from "./Component/Section4"
-// import  Section5 from "./Component/Section5"
-
 import "./App.css";
 import FoodDetails from "./Pages/FoodDetails";
 import Blog from "./BlogFrontend.js/Blog";

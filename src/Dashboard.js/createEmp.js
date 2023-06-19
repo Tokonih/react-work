@@ -1,9 +1,12 @@
-function CreateEmp() {
+import Navigation from "../Component/Navigation";
+
+function CreateEmp(){
     return (
-      <div>
+        <div>
+            <Navigation/>
         <h1>this is good</h1>
         {/* <form action=""></form> */}
       </div>
     );
 }
-export default CreateEmp()
+export default CreateEmp();

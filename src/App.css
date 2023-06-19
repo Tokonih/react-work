@@ -257,6 +257,7 @@ form button {
   display: flex;
   align-items: center;
   justify-content: center;
+  color: white;
 
 }
 
@@ -292,6 +293,85 @@ form button {
   text-decoration: none;
   font-weight: 700;
 }
+
+.myicon{
+  color: blue;
+  font-size: 30px;
+}
+
+.blogcard-container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.blog-card {
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(209, 209, 209, 0.4);
+  width: 90%;
+  margin: 30px auto;
+}
+
+.blog-card img{
+  height: 250px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  object-fit: cover;
+
+}
+
+.blog-cat{
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.blog-cat span{
+  margin-left: 5px;
+  color: #15157e;
+
+}
+
+.blog-title{
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.blog-desc{
+  font: 14px;
+  color: #787878;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.blog-footer{
+  display: flex;
+  gap: 20px;
+}
+
+.blog-footer p{
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+
+color: #787878;}
+.blog-footer-icon{
+  font-size: 14px;
+  margin-right: 5px;
+  color: black;
+}
+
+.bf-date{
+  text-transform: uppercase;
+}
+
+
+
+
 
 @media (max-width: 427px) {
   .Approach-2 div {
