@@ -4,13 +4,13 @@ import BlogNav from "./BlogNav";
 import { useParams } from "react-router-dom";
 import { IoSend } from "react-icons/io5";
 
+
 function BlogSingle() {
   const { id } = useParams();
   const [food, setFood] = useState({});
   const [comments, setcomments] = useState([]);
   const [comment, setcomment] = useState("");
   const [commentErr, setcommentEff] = useState(false);
-
   const getFood = () => {
     fetch(`https://6464b5f3043c103502c0b762.mockapi.io/Blog/${id}`)
       .then((resp) => resp.json())
@@ -29,7 +29,7 @@ function BlogSingle() {
       });
   };
 
-    const handleComment = () => {
+  const handleComment = () => {
     if (comment == "") {
       setcommentEff(true);
       alert(" field required");
@@ -50,11 +50,14 @@ function BlogSingle() {
       .then((resp) => resp.json())
       .then((data) => {
         console.log(data);
-        alert("comment made");
+          alert("comment made");
+          setcomments((preComments) => [...preComments, data])
       })
       .catch((err) => {
-        console.log(err);
+          console.log(err);
+          
       });
+      setcomment('');
   };
 
   useEffect(() => {
@@ -72,17 +75,19 @@ function BlogSingle() {
       <p>{food.date}</p>
 
       <div className="blog-comment">
-        <form action="" className="blogcomment-form" onSubmit={handleComment}>
+        <form action="" className="blogcomment-form">
           <textarea
             value={comment}
             onChange={(e) => setcomment(e.target.value)}
           ></textarea>
-          <button>{<IoSend />}</button>
+          <button type="button" onClick={handleComment}>
+            {<IoSend />}
+          </button>
         </form>
       </div>
       <div className="singleblog-comment">
         <h3>Comment: {comments.length}</h3>
-        {comment.length !== 0 ? (
+        {comments.length !== 0 ? (
           comments.map((commt) => (
             <div key={commt.id} className="comments">
               <p>{commt.body}</p>
