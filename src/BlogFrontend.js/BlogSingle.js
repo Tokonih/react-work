@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import BlogNav from "./BlogNav";
 import { useParams } from "react-router-dom";
 import { IoSend } from "react-icons/io5";
+import { MdLoyalty } from "react-icons/md";
 
 
 function BlogSingle() {
@@ -66,37 +67,40 @@ function BlogSingle() {
   }, []);
 
   return (
-    <div>
-      <BlogNav />
-      <img src={food.Image} alt="" />
-      <p>{food.Title}</p>
-      <h3>{food.Category}</h3>
-      <p>{food.Description}</p>
-      <p>{food.date}</p>
+    <div >
+        <BlogNav />
+      <div className="blogsingle">
+        <img src={food.Image} alt="" />
+        <h3><MdLoyalty/>{food.Title}</h3>
+        <h3>{food.Category}</h3>
+        <p>{food.Description}</p>
+        <p>{food.date}</p>
 
-      <div className="blog-comment">
-        <form action="" className="blogcomment-form">
-          <textarea
-            value={comment}
-            onChange={(e) => setcomment(e.target.value)}
-          ></textarea>
-          <button type="button" onClick={handleComment}>
-            {<IoSend />}
-          </button>
-        </form>
-      </div>
-      <div className="singleblog-comment">
-        <h3>Comment: {comments.length}</h3>
-        {comments.length !== 0 ? (
-          comments.map((commt) => (
-            <div key={commt.id} className="comments">
-              <p>{commt.body}</p>
-              <p>{commt.date}</p>
-            </div>
-          ))
-        ) : (
-          <p> Be the first to comment </p>
-        )}
+        <div className="blog-comment">
+          <form action="" className="blogcomment-form">
+            <textarea
+              value={comment}
+                          onChange={(e) => setcomment(e.target.value)}
+                          placeholder="Add a comment..."
+            ></textarea>
+            <button type="button" onClick={handleComment}>
+              {<IoSend />}
+            </button>
+          </form>
+        </div>
+        <div className="singleblog-comment">
+          <h3>Comment: {comments.length}</h3>
+          {comments.length !== 0 ? (
+            comments.map((commt) => (
+              <div key={commt.id} className="comments">
+                <p>{commt.body}</p>
+                <p>{commt.date}</p>
+              </div>
+            ))
+          ) : (
+            <p> Be the first to comment </p>
+          )}
+        </div>
       </div>
     </div>
   );
