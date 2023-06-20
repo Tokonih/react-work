@@ -9,9 +9,10 @@ import Posts from "./Pages/Posts";
 import "./App.css";
 import FoodDetails from "./Pages/FoodDetails";
 import Blog from "./BlogFrontend.js/Blog";
-import CreateEmp from "./Dashboard.js/createEmp";
+// import CreateEmp from "./Dashboard.js/createEmp";
 import BlogDashboard from "./BlogAdmin.js/BlogDashboard";
 import CreateBlog from "./BlogAdmin.js/CreateBLog";
+import BlogSingle from "./BlogFrontend.js/BlogSingle";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path="/UserInfo" element={<Userinfo />} />
         <Route path="/posts" element={<Posts />} />
         <Route path="/Blog" element={<Blog />} />
+        <Route path="/Blog/:id" element={<BlogSingle />} />
         <Route path="/BlogDashboard" element={<BlogDashboard />} />
         <Route path="/CreateBlog" element={<CreateBlog />} />
 

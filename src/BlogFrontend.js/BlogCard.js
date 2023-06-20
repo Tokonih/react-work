@@ -6,8 +6,11 @@ import {
   IoThumbsUpOutline,
   IoThumbsUpSharp,
   IoThumbsDownOutline,
+  // IoSend
 } from "react-icons/io5";
 import { useState } from "react";
+import { Link } from "react-router-dom";
+
 function BlogCard() {
 
   const [like, setLike] = useState(IoThumbsUpOutline);
@@ -16,6 +19,8 @@ function BlogCard() {
   const likes = () => {
         setLike(IoThumbsUpSharp);
   }
+
+
 
   fetch("https://6464b5f3043c103502c0b762.mockapi.io/Blog")
     .then((resp) => resp.json())
@@ -28,19 +33,20 @@ function BlogCard() {
         {blogs &&
           blogs.map((data) => (
             <div className="blog-card">
-              {/* <h2>Blog Card</h2> */}
-              <img src={data.Image} alt="blog Food" />
-              <div className="blog-cat">
+              <Link to={`/Blog/${data.id}`}>
+                <img src={data.Image} alt="blog Food" />
                 <MdLoyalty className="blog-cat-icon" />
                 <span>{data.Title}</span>
-              </div>
-              <h3 className="blog-title">{data.Category}</h3>
-              <p className="blog-desc">{data.Description}</p>
+
+                <div className="blog-cat">
+                  <h3 className="blog-title">{data.Category}</h3>
+                  <br />
+                  <p className="blog-desc">{data.Description}</p>
+                </div>
+              </Link>
               <div className="blog-footer">
                 <p className="bf-date">{data.date}</p>
-                {/* <p className="bf-date">
-              <IoTimeOutline className="blog-footer-icon" />0
-            </p> */}
+
                 <p>
                   <IoChatbubblesOutline className="blog-footer-icon" />0
                 </p>
@@ -49,6 +55,8 @@ function BlogCard() {
                   <IoThumbsDownOutline className="blog-footer-icon" />0
                 </p>
               </div>
+
+             
             </div>
           ))}
       </div>

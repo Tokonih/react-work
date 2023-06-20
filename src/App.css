@@ -388,6 +388,20 @@ color: #787878;}
   background-color: black;
 }
 
+/* blog comment */
+.blogcomment-form{
+
+}
+.blogcomment-form textarea{
+  width: 80%;
+  height: 80px;
+  outline: none;
+  border: ;
+}
+
+.blogcomment-form button{
+  width: 20%;
+}
 
 @media (max-width: 427px) {
   .Approach-2 div {
