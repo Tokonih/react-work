@@ -15,22 +15,22 @@ import { useEffect } from "react";
 
 function BlogCard() {
   const { id } = useParams();
-  const [like, setLike] = useState(IoThumbsUpOutline);
+  const [like, setLike] = useState(0);
   const [blogs, setBlogs] = useState([]);
   const [comment, setComment] = useState([]);
 
   const likes = () => {
-    setLike(IoThumbsUpSharp);
+    setLike(like + 1);
   };
 
   const getData = () => {
-       fetch("https://6464b5f3043c103502c0b762.mockapi.io/Blog")
-         .then((resp) => resp.json())
-         .then((data) => {
-           setBlogs(data);
-           console.log(data);
-         });
- }
+    fetch("https://6464b5f3043c103502c0b762.mockapi.io/Blog")
+      .then((resp) => resp.json())
+      .then((data) => {
+        setBlogs(data);
+        console.log(data);
+      });
+  };
 
   const getComment = () => {
     fetch("https://6464b5f3043c103502c0b762.mockapi.io/comments")
@@ -42,11 +42,11 @@ function BlogCard() {
       });
   };
 
-  const totalcommnent = comment.length
+  const totalcommnent = comment.length;
   useEffect(() => {
-    getData()
-    getComment()
-  },[])
+    getData();
+    getComment();
+  }, []);
   return (
     <div className="blogcard-container">
       {blogs &&
@@ -70,7 +70,9 @@ function BlogCard() {
                 <IoChatbubblesOutline className="blog-footer-icon" />
                 {totalcommnent}
               </p>
-              <p onClick={likes}>{like}0</p>
+              <p onClick={likes}>
+                <IoThumbsUpOutline />
+              </p>
               <p>
                 <IoThumbsDownOutline className="blog-footer-icon" />0
               </p>
