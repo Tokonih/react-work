@@ -189,6 +189,12 @@ form button {
   font-weight: 500;
 }
 
+/* Food Single */
+.single-food{
+  width: 60%;
+  margin: auto;
+}
+
 @media (max-width: 1000px) {
   .Approach {
     display: block;
