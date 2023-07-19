@@ -330,7 +330,7 @@ form button {
 }
 
 .blog-cat{
-  display: flex;
+  display: block;
   align-items: center;
   margin: 10px 0;
 }

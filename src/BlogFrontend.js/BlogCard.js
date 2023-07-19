@@ -59,7 +59,6 @@ function BlogCard() {
 
               <div className="blog-cat">
                 <h3 className="blog-title">{data.Category}</h3>
-                <br />
                 <p className="blog-desc">{data.Description}</p>
               </div>
             </Link>
